@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasa joki Tugas</title>
+</head>
+<body>
+    <!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EduAid — Jasa Pendampingan Mahasiswa</title>
+  <meta name="description" content="Layanan pendampingan tugas kuliah: pembuatan PPT, desain, proofreading, consultasi, dan banyak lagi. Order mudah lewat form, notifikasi ke email/WhatsApp." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#6ee7b7;--accent2:#7c3aed;--muted:#98a2b3;--glass:rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Arial;background:linear-gradient(180deg,#061021 0%,#07142a 60%);color:#e6eef6;min-height:100vh}
+    header{padding:28px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;font-weight:800;color:#06273a}
+    .brand h1{margin:0;font-size:18px}
+    nav{display:flex;gap:12px}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px}
+    nav a.cta{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#022027;font-weight:700}
+
+    main{display:grid;grid-template-columns:1fr 420px;gap:24px;padding:12px 24px 48px}
+    .hero{padding:28px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:16px}
+    .hero h2{margin:0 0 10px;font-size:28px}
+    .hero p{margin:0 0 18px;color:var(--muted)}
+
+    .services{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
+    .svc{background:var(--card);padding:12px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,.6)}
+    .svc h3{margin:0 0 6px;font-size:15px}
+    .svc p{margin:0;color:var(--muted);font-size:13px}
+
+    /* right column (order) */
+    .order-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:18px;border-radius:14px;position:sticky;top:28px;height:max-content}
+    .order-card h3{margin:0 0 8px}
+    label{display:block;font-size:13px;margin-top:10px;color:var(--muted)}
+    input[type=text],input[type=email],select,textarea{width:100%;padding:10px;border-radius:10px;border:0;background:var(--glass);color:#e6eef6;margin-top:6px}
+    textarea{min-height:110px;resize:vertical}
+    .row{display:flex;gap:8px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:0;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#022027;font-weight:700;cursor:pointer;margin-top:12px}
+    .btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(255,255,255,0.06)}
+
+    .how{margin-top:18px;color:var(--muted);font-size:13px}
+
+    footer{text-align:center;padding:18px;color:var(--muted)}
+
+    /* modal */
+    .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(2,6,23,0.6),rgba(2,6,23,0.8));z-index:60}
+    .modal .box{background:#071427;padding:18px;border-radius:14px;max-width:760px;width:94%}
+    .orders-list{max-height:360px;overflow:auto;margin-top:8px}
+    .order-item{border-radius:10px;padding:10px;background:linear-gradient(90deg,rgba(255,255,255,0.02),transparent);margin-bottom:8px}
+
+    /* small screens */
+    @media(max-width:980px){main{grid-template-columns:1fr;}.order-card{position:relative;top:0}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">EA</div>
+      <div>
+        <h1>EduAid</h1>
+        <div style="font-size:12px;color:var(--muted)">Pendampingan & jasa edukasi mahasiswa</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#services">Layanan</a>
+      <a href="#order" class="cta">Pesan Sekarang</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Jasa pendampingan tugas kuliah yang aman & profesional</h2>
+      <p>Kami membantu mahasiswa dengan layanan edukasi: pembuatan PPT, desain ilustrasi, proofreading, kelola referensi, coaching presentasi, dan pendampingan langkah demi langkah — bukan pengerjaan curang.</p>
+
+      <div class="services" id="services">
+        <div class="svc">
+          <h3>Pembuatan PPT Profesional</h3>
+          <p>Slide rapi, desain konsisten, catatan pembicara dan template presentasi.</p>
+        </div>
+        <div class="svc">
+          <h3>Desain & Ilustrasi</h3>
+          <p>Infografik, diagram, dan ilustrasi yang membantu menjelaskan konsep.</p>
+        </div>
+        <div class="svc">
+          <h3>Review & Proofreading</h3>
+          <p>Pemeriksaan tata bahasa, format, dan alur logis tulisan tugas atau laporan.</p>
+        </div>
+        <div class="svc">
+          <h3>Konsultasi & Coaching</h3>
+          <p>Sesi online untuk membantu memahami materi, mempersiapkan presentasi, dan menyusun langkah tugas.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+        <button class="btn" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Pesan Sekarang</button>
+        <button class="btn ghost" onclick="openAdminModal()">Lihat Pesanan (Pemilik)</button>
+      </div>
+
+      <div class="how">
+        <strong>Cara kerja singkat:</strong> Kamu pesan → kami konfirmasi (WhatsApp / Email) → proses pendampingan dimulai → file final & catatan dikirim. Pembayaran di luar situs. Kami hanya menyediakan pendampingan, bukan pengerjaan tugas untuk menipu aturan akademik.
+      </div>
+    </section>
+
+    <aside class="order-card" id="order">
+      <h3>Form Pemesanan</h3>
+      <div style="font-size:13px;color:var(--muted)">Isi detail di bawah, pilih jenis layanan, dan klik "Kirim Pesanan". Kamu bisa pilih agar kami hubungi via WhatsApp.</div>
+
+      <form id="orderForm" onsubmit="return handleSubmit(event)">
+        <label>Nama Lengkap <input type="text" id="name" required placeholder="Nama kamu"/></label>
+        <label>Email <input type="email" id="email" required placeholder="email@contoh.com"/></label>
+        <label>Nomor WhatsApp <input type="text" id="wa" placeholder="08xx... (opsional)"/></label>
+        <label>Jenis Layanan
+          <select id="service">
+            <option value="PPT">Pembuatan PPT (desain + catatan presenter)</option>
+            <option value="Ilustrasi">Desain & Ilustrasi (infografik)</option>
+            <option value="Review">Review & Proofreading</option>
+            <option value="Konsultasi">Konsultasi / Coaching</option>
+            <option value="Referensi">Bantuan Referensi & Struktur</option>
+            <option value="Lainnya">Lainnya (jelaskan di catatan)</option>
+          </select>
+        </label>
+        <label>Deadline <input type="text" id="deadline" placeholder="Tanggal / Waktu (mis. 2025-09-10)"/></label>
+        <label>Detail & Catatan <textarea id="note" placeholder="Jelaskan kebutuhan secara singkat: jumlah slide, topik, file referensi, dll"></textarea></label>
+
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <button class="btn" type="submit">Kirim Pesanan</button>
+          <button class="btn ghost" type="button" onclick="sendWhatsAppPreview()">Buka di WhatsApp</button>
+        </div>
+      </form>
+
+      <div style="margin-top:12px;color:var(--muted);font-size:13px">Catatan: Setelah dikirim, pesanan disimpan di dashboard pemilik dan notifikasi terbuka untuk dikirim lewat email/WhatsApp. Ubah nomor & email admin di bagian &quot;Konfigurasi&quot; di dalam kode.</div>
+
+      <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin-top:12px">
+      <div style="font-size:13px;color:var(--muted)"><strong>Admin quick tips:</strong> Tekan "Lihat Pesanan (Pemilik)" untuk membuka modal daftar pesanan. Password default: <code>admin123</code> (ubah di file).</div>
+    </aside>
+  </main>
+
+  <footer>
+    &copy; EduAid — Jasa Pendampingan Mahasiswa • dibuat dengan 💚 oleh pemilik
+  </footer>
+
+  <!-- modal for viewing orders -->
+  <div class="modal" id="adminModal">
+    <div class="box">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+        <div>
+          <strong>Dashboard Pesanan (Pemilik)</strong>
+          <div style="font-size:12px;color:var(--muted)">Masukkan password untuk membuka daftar pesanan.</div>
+        </div>
+        <div>
+          <input type="password" id="adminPass" placeholder="Password" style="padding:8px;border-radius:8px;background:var(--glass);border:0;color:#e6eef6" />
+          <button class="btn" onclick="unlockAdmin()">Buka</button>
+          <button class="btn ghost" onclick="closeAdminModal()">Tutup</button>
+        </div>
+      </div>
+
+      <div class="orders-list" id="ordersList" style="margin-top:12px"></div>
+    </div>
+  </div>
+
+  <script>
+    // ====== CONFIG ======
+    // ubah sesuai kebutuhanmu
+    const ADMIN_PASSWORD = 'admin123';
+    const ADMIN_EMAIL = 'youremail@example.com'; // email yang akan diisi ketika membuka mailto
+    const ADMIN_WA_NUMBER = '6281234567890'; // nomor WhatsApp admin dalam format internasional tanpa + (contoh: 62 untuk Indonesia)
+    // =====================
+
+    // helper: read/write orders from localStorage
+    function getOrders(){
+      try{ return JSON.parse(localStorage.getItem('edu_orders')||'[]') }catch(e){return []}
+    }
+    function saveOrders(list){ localStorage.setItem('edu_orders', JSON.stringify(list)) }
+
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const wa = document.getElementById('wa').value.trim();
+      const service = document.getElementById('service').value;
+      const deadline = document.getElementById('deadline').value.trim();
+      const note = document.getElementById('note').value.trim();
+
+      if(!name||!email){ alert('Nama dan email wajib diisi.'); return false }
+
+      const order = {id:Date.now(),name,email,wa,service,deadline,note,created:new Date().toISOString(),status:'baru'};
+
+      // save locally
+      const orders = getOrders(); orders.unshift(order); saveOrders(orders);
+
+      // open mail client with order summary (mailto)
+      const subject = encodeURIComponent('[Pesanan EduAid] '+service+' - '+name);
+      const body = encodeURIComponent(
+        'Halo Admin EduAid,%0D%0A%0D%0ASaya telah membuat pesanan. Berikut detail:%0D%0A'+
+        'Nama: '+name+'%0D%0AEmail: '+email+'%0D%0AWA: '+wa+'%0D%0ALayanan: '+service+'%0D%0ADeadline: '+deadline+'%0D%0ADetail: '+note+'%0D%0A%0D%0AID Pesanan: '+order.id+'%0D%0A%0D%0ARegards,%0D%0A'+name
+      );
+      const mailto = 'mailto:'+ADMIN_EMAIL+'?subject='+subject+'&body='+body;
+      window.open(mailto);
+
+      // also offer to open WhatsApp if admin number is set
+      if(ADMIN_WA_NUMBER && confirm('Buka WhatsApp untuk mengirim notifikasi ke admin?')){
+        const waText = encodeURIComponent('Pesanan baru EduAid:\nNama: '+name+'\nLayanan: '+service+'\nDeadline: '+deadline+'\nEmail: '+email+'\nCatatan: '+note+'\nID: '+order.id);
+        window.open('https://wa.me/'+ADMIN_WA_NUMBER+'?text='+waText,'_blank');
+      }
+
+      // feedback
+      alert('Pesanan berhasil dibuat! Admin akan menerima notifikasi melalui email/WhatsApp.');
+      document.getElementById('orderForm').reset();
+      return false;
+    }
+
+    // whatsapp preview for user before submitting
+    function sendWhatsAppPreview(){
+      const name = document.getElementById('name').value.trim()||'[Nama]';
+      const service = document.getElementById('service').value;
+      const deadline = document.getElementById('deadline').value.trim()||'[Deadline]';
+      const note = document.getElementById('note').value.trim()||'[Detail]';
+
+      const msg = encodeURIComponent('Hai, saya '+name+' ingin memesan layanan '+service+' dengan deadline '+deadline+'. Detail: '+note);
+      // open user's WA (works if they have WA web/desktop)
+      window.open('https://wa.me/?text='+msg,'_blank');
+    }
+
+    // admin modal functions
+    function openAdminModal(){ document.getElementById('adminModal').style.display='flex' }
+    function closeAdminModal(){ document.getElementById('adminModal').style.display='none'; document.getElementById('ordersList').innerHTML=''; document.getElementById('adminPass').value='' }
+
+    function unlockAdmin(){
+      const pass = document.getElementById('adminPass').value;
+      if(pass!==ADMIN_PASSWORD){ alert('Password salah'); return }
+      renderOrders();
+    }
+
+    function renderOrders(){
+      const list = getOrders();
+      const container = document.getElementById('ordersList'); container.innerHTML='';
+      if(list.length===0){ container.innerHTML='<div style="color:var(--muted)">Belum ada pesanan.</div>'; return }
+      list.forEach(o=>{
+        const el = document.createElement('div'); el.className='order-item';
+        el.innerHTML = '<div style="display:flex;justify-content:space-between;gap:8px"><strong>'+escapeHtml(o.name)+'</strong><span style="font-size:12px;color:var(--muted)">'+(new Date(o.created)).toLocaleString()+'</span></div>'+
+          '<div style="font-size:13px;color:var(--muted);margin-top:6px">Layanan: '+escapeHtml(o.service)+' | WA: '+escapeHtml(o.wa||'-')+' | Email: '+escapeHtml(o.email)+'</div>'+
+          '<div style="margin-top:8px;color:var(--muted);font-size:13px">'+escapeHtml(o.note||'-')+'</div>'+
+          '<div style="display:flex;gap:8px;margin-top:8px"><button class="btn" onclick="markDone('+o.id+')">Tandai Selesai</button><button class="btn ghost" onclick="contactClient(\''+o.email+'\',\''+o.wa+'\',\''+o.id+'\')">Hubungi</button><button class="btn ghost" onclick="deleteOrder('+o.id+')">Hapus</button></div>';
+        container.appendChild(el);
+      })
+    }
+
+    function markDone(id){
+      const list = getOrders();
+      const i = list.findIndex(x=>x.id===id);
+      if(i!==-1){ list[i].status='selesai'; saveOrders(list); renderOrders(); }
+    }
+
+    function deleteOrder(id){
+      if(!confirm('Hapus pesanan ini?')) return;
+      let list = getOrders(); list = list.filter(x=>x.id!==id); saveOrders(list); renderOrders();
+    }
+
+    function contactClient(email, wa, id){
+      const subj = encodeURIComponent('[Tanggapan EduAid] Pesanan ID '+id);
+      const body = encodeURIComponent('Halo,\n\nKami menanggapi pesanan Anda (ID: '+id+'). Silakan balas email ini atau hubungi kami via WhatsApp.\n\nSalam,\nTim EduAid');
+      window.open('mailto:'+email+'?subject='+subj+'&body='+body);
+      if(wa){ const waMsg = encodeURIComponent('Halo, menanggapi pesanan Anda (ID: '+id+'). Kami telah mengirim email.'); window.open('https://wa.me/'+wa.replace(/\D/g,'')+'?text='+waMsg) }
+    }
+
+    // small util
+    function escapeHtml(s){ if(!s) return ''; return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') }
+
+    // close modal on background click
+    document.getElementById('adminModal').addEventListener('click',(e)=>{ if(e.target.id==='adminModal') closeAdminModal() })
+
+    // initialize sample data (optional) - comment out if not desired
+    (function seed(){ if(getOrders().length===0){ /* no seed */ } })();
+  </script>
+</body>
+</html>
+
+</body>
+</html>
